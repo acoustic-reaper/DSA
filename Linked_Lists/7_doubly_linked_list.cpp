@@ -28,7 +28,19 @@ void insert_at_head(Node** head, int x)
 
 void insert_at_tail(Node** head, int x)
 {
-    
+    Node *temp1 = new Node(x);
+    if (*head == NULL)
+    {
+        *head = temp1;
+        return;
+    }
+    Node *temp2 = *head;
+    while (temp2 -> next)
+    {
+        temp2 = temp2 -> next;
+    }
+    temp2 -> next = temp1;
+    temp1 -> prev = temp2;
 }
 
 void print(Node* head)
