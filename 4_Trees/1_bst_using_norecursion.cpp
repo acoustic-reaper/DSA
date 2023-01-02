@@ -94,6 +94,10 @@ bool Search_using_diff_algo(BstNode* root, int x)
 
 void Print(BstNode* root)
 {
+    // Depth - first Traversal
+    // Pre - order Traversal -> D L R
+    // Using Inorder_traversal -> (LDR) -> we can get the data in increasing order
+    // Using Inorder_traversal -> (RDL) -> we will get the data in decreasing order
     if (root == NULL)
     {
         return;
