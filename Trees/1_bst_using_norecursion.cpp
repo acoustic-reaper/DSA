@@ -86,7 +86,7 @@ bool Search_using_diff_algo(BstNode* root, int x)
 {
     while (root != NULL && root -> data != x)
     {
-        root = (root -> data >= x)? root -> left : root -> right;
+        root = (root -> data > x)? root -> left : root -> right;
     }
 
     return (root != NULL)? true : false; 
